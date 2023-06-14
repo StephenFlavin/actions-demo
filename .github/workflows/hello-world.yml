@@ -1,0 +1,20 @@
+name: hello-world
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+      - '.i-am-a-hidden-file'
+      - 'docs/**'
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+      - '.i-am-a-hidden-file'
+      - 'docs/**'
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
